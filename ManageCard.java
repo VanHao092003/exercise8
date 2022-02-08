@@ -1,4 +1,5 @@
 import java.util.ArrayList;
+import java.util.stream.Collectors;
 import java.util.List;
 
 public class ManageCard{
@@ -19,8 +20,8 @@ public class ManageCard{
         this.cards.stream().sorted((o1, o2) -> o1.getName().compareTo(o2.getName())).forEach(System.out::println);
     }
 
-    public void showHistoryBorrowedOfStudent(String code){
-        this.cards.stream().filter(o -> o.getCode().equals(code)).forEach(o -> System.out.println(o.toString()));
+    public List<Card> showHistoryBorrowedOfStudent(String code){
+        return this.cards.stream().filter(o -> o.getCode().contains(code)).collect(Collectors.toList());
     }
     
     public void delete(String code){
