@@ -19,6 +19,7 @@ public class Main {
             System.out.println("Enter 3: To show all card and information of student.");
             System.out.println("Enter 4: To show history of card.");
             System.out.println("Enter 5: To exit.");
+            System.out.print("Choose: ");
             String choose = scanner.nextLine();
             switch (choose) {
                 case "1":{
@@ -26,6 +27,7 @@ public class Main {
                     System.out.println("Enter 1: To add new card for new student.");
                     System.out.println("Enter 2: To extra for student who already have a card.");
                     System.out.println("Enter 3: To exit.");
+                    System.out.print("Choose: ");
                     String choose1 = scanner.nextLine();
                     switch (choose1) {
                         case "1":{
@@ -96,6 +98,5 @@ public class Main {
                     break;
             }
         }
-            
     }
 }
