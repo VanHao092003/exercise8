@@ -51,7 +51,7 @@ public class Card extends Student{
 
     @Override
     public String toString() {
-        return  super.toString() + " Information of card [ Borrowed day: " + borrowedDay + ", Pay day: " + payDay + ", Bookstore number: " + bookstoreNumber;
+        return  super.toString() + " Information of card [ Code " + code + ", Borrowed day:" + borrowedDay + ", Pay day: " + payDay + ", Bookstore number: " + bookstoreNumber;
     }
 
 }
