@@ -86,7 +86,12 @@ public class Main {
                 }
                 case "4":{
                     System.out.print("code card you want to show history: "); String code  = scanner.nextLine();
-                    manageCard.showHistoryBorrowedOfStudent(code);
+                    if(manageCard.showHistoryBorrowedOfStudent(code) != null){
+                        System.out.println(manageCard.showHistoryBorrowedOfStudent(code).toString());
+                    }
+                    else{
+                        System.out.println("There are no the value code at this list code.");
+                    }
                     break;
                 }
                 case "5":{
