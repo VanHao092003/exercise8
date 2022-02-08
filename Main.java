@@ -52,18 +52,22 @@ public class Main {
                             
                         case "2":{
                             System.out.print("code card: "); String code  = scanner.nextLine();
-                            System.out.println("---------------information card of student---------------");
-                            System.out.print("Bookstore number: "); int bookstoreNumber = scanner.nextInt(); scanner.nextLine();
-                            System.out.println("Borrowed day: " + dateFormat.format(day));
-                            String borrowedDay = dateFormat.format(day);
-                            System.out.print("Number borrowed day: "); int numberBorrowedDay = scanner.nextInt(); scanner.nextLine();
-                            calendar.setTime(dateFormat.parse(borrowedDay));
-                            calendar.add(Calendar.DATE, numberBorrowedDay);
-                            String payDay = dateFormat.format(calendar.getTime());
-                            Card cardCache = manageCard.addHadCard(code);
-                            Student card = new Card(cardCache.getName(), cardCache.getAge(), cardCache.getClass_(), cardCache.getCode(), bookstoreNumber, borrowedDay, payDay);
-                            System.out.println(card.toString());
-                            manageCard.addCard((Card)card);
+                            if(manageCard.addHadCard(code) != null){
+                                System.out.println("---------------information card of student---------------");
+                                System.out.print("Bookstore number: "); int bookstoreNumber = scanner.nextInt(); scanner.nextLine();
+                                System.out.println("Borrowed day: " + dateFormat.format(day));
+                                String borrowedDay = dateFormat.format(day);
+                                System.out.print("Number borrowed day: "); int numberBorrowedDay = scanner.nextInt(); scanner.nextLine();
+                                calendar.setTime(dateFormat.parse(borrowedDay));
+                                calendar.add(Calendar.DATE, numberBorrowedDay);
+                                String payDay = dateFormat.format(calendar.getTime());
+                                Card cardCache = manageCard.addHadCard(code);
+                                Student card = new Card(cardCache.getName(), cardCache.getAge(), cardCache.getClass_(), cardCache.getCode(), bookstoreNumber, borrowedDay, payDay);
+                                System.out.println(card.toString());
+                                manageCard.addCard((Card)card);
+                            } else {
+                                System.out.println("There are no the value code at this list code.");
+                            }
                             break;
                         }
                         case "3":{
