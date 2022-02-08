@@ -1,20 +1,27 @@
-import java.util.Calendar;
 
 public class Card extends Student{
     private String code;
     private int bookstoreNumber;
     private String borrowedDay;
-    private Calendar payDay;
+    private String payDay;
 
 
     public Card(String name, int age, String class_, String code, int bookstoreNumber, String borrowedDay,
-            Calendar payDay) {
+            String payDay) {
         super(name, age, class_);
         this.code = code;
         this.bookstoreNumber = bookstoreNumber;
         this.borrowedDay = borrowedDay;
         this.payDay = payDay;
     }
+
+    
+
+    public Card(String name, int age, String class_) {
+        super(name, age, class_);
+    }
+
+
 
     public String getCode() {
         return code;
@@ -35,10 +42,10 @@ public class Card extends Student{
     public void setBorrowedDay(String borrowedDay) {
         this.borrowedDay = borrowedDay;
     }
-    public Calendar getPayDay() {
+    public String getPayDay() {
         return payDay;
     }
-    public void setPayDay(Calendar payDay) {
+    public void setPayDay(String payDay) {
         this.payDay = payDay;
     }
 

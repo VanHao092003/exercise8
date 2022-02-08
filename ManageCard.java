@@ -7,7 +7,6 @@ public class ManageCard{
     public ManageCard(){
         cards = new ArrayList<>();
     }
-
     public void addCard(Card card){
         cards.add(card);
     }
@@ -27,6 +26,7 @@ public class ManageCard{
     public void delete(String code){
         Card card =  this.cards.stream().filter(o -> o.getCode().equals(code)).findFirst().orElse(null);
         if(card != null){
+            card.toString();
             cards.remove(card);
         } else{
             System.out.println("There are no value of the code at this list card.");
