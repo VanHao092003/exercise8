@@ -10,7 +10,7 @@ public class Main {
         Scanner scanner = new Scanner(System.in);
         Calendar calendar = Calendar.getInstance();
         Date day = calendar.getTime();
-        SimpleDateFormat dateFormat = new SimpleDateFormat("yyyy-MM-dd");
+        SimpleDateFormat dateFormat = new SimpleDateFormat("dd-MM-yyyy");
         ManageCard manageCard = new ManageCard();
         while (true) {
             System.out.println("----------------------choose command--------------------------");
