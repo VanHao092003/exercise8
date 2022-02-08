@@ -26,7 +26,6 @@ public class Main {
                     System.out.println("----------------------choose command--------------------------");
                     System.out.println("Enter 1: To add new card for new student.");
                     System.out.println("Enter 2: To extra for student who already have a card.");
-                    System.out.println("Enter 3: To exit.");
                     System.out.print("Choose: ");
                     String choose1 = scanner.nextLine();
                     switch (choose1) {
@@ -69,9 +68,6 @@ public class Main {
                                 System.out.println("There are no the value code at this list code.");
                             }
                             break;
-                        }
-                        case "3":{
-                            return;
                         }
                         default:
                             System.out.println("Invalid.");
