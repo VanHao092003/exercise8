@@ -21,7 +21,7 @@ public class ManageCard{
     }
 
     public List<Card> showHistoryBorrowedOfStudent(String code){
-        return this.cards.stream().filter(o -> o.getCode().contains(code)).collect(Collectors.toList());
+        return this.cards.stream().filter(o -> o.getCode().equals(code)).collect(Collectors.toList());
     }
     
     public void delete(String code){
