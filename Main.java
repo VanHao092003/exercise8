@@ -2,7 +2,6 @@ import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.Calendar;
 import java.util.Date;
-import java.util.List;
 import java.util.Scanner;
 
 
@@ -78,15 +77,7 @@ public class Main {
                 }
                 case "2":{
                     System.out.print("code card you want to delete: "); String code  = scanner.nextLine();
-                    List<Card> cards = manageCard.delete(code);
-                    if(cards.size() > 0){
-                        for(Card card : cards){
-                            cards.remove(card);
-                        }
-                        System.out.println("You have finish card.");
-                    } else{
-                        System.out.println("There are no value of the code at this list card.");
-                    }
+                    manageCard.delete(code);
                     break;
                 }   
                 case "3":{

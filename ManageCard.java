@@ -24,7 +24,16 @@ public class ManageCard{
         return this.cards.stream().filter(o -> o.getCode().equals(code)).collect(Collectors.toList());
     }
     
-    public List<Card> delete(String code){
-        return this.cards.stream().filter(o -> o.getCode().equals(code)).collect(Collectors.toList());
+    public void delete(String code){
+        long count =  this.cards.stream().filter(o -> o.getCode().equals(code)).count();
+        while (count > 0) {
+            Card card = this.cards.stream().filter(o -> o.getCode().equals(code)).findFirst().orElse(null);
+            cards.remove(card);
+            count--;
+        }
+        if(count == 0){
+            System.out.println("You have success card of student.");
+        }
+        
     }
 }
