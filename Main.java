@@ -80,7 +80,9 @@ public class Main {
                     System.out.print("code card you want to delete: "); String code  = scanner.nextLine();
                     List<Card> cards = manageCard.delete(code);
                     if(cards.size() > 0){
-                        cards.stream().forEach(o -> cards.remove(o));
+                        for(Card card : cards){
+                            cards.remove(card);
+                        }
                         System.out.println("You have finish card.");
                     } else{
                         System.out.println("There are no value of the code at this list card.");
